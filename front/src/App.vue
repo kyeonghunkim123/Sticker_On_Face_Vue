@@ -1,14 +1,15 @@
 <template>
-  <VueHeader></VueHeader>
+  <h1>test</h1>
+  <SignUp></SignUp>
 </template>
 
 <script>
-import VueHeader from './components/VueHeader.vue'
+import SignUp from './components/SignUp.vue'
 
 export default {
   name: 'App',
   components: {
-    VueHeader
+    SignUp
   }
 }
 </script>
