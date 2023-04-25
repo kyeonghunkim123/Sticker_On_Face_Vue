@@ -93,7 +93,10 @@
     }),
       methods: {
           login() {
-              // Your login logic here
+               if (!this.username || !this.password) {
+                alert('아이디와 비밀번호를 입력해주세요.');
+                return;
+                }
           },
       },
       components: {

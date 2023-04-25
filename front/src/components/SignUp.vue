@@ -4,7 +4,7 @@
             <v-form fast-fail @submit.prevent="login">
                 <v-text-field v-model="username" label="User Name"></v-text-field>
 
-                <v-text-field v-model="password" label="password"></v-text-field>
+                <v-text-field v-model="password" type="password" label="password"></v-text-field>
                 <a href="#" class="text-body-2 font-weight-regular">Forgot Password?</a>
 
                 <v-btn type="submit" color="primary" block class="mt-2">Sign in</v-btn>
@@ -26,7 +26,14 @@ export default {
     },
     methods: {
         login() {
-            // Your login logic here
+             if (!this.username ) {
+              alert('아이디를 입력해 주세요!!');
+              return;
+               }
+             if (!this.password){
+             alert('비밀번호를 입력해 주세요!!');
+             return;
+             }
         },
     },
 }
