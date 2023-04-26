@@ -1,7 +1,151 @@
+<style>
+div {
+	display: inline block;
+	}
+</style>
 <template>
-  <router-view />
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HYPER</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a class="logo" href="/"><strong>HYPER</strong></a>
+					<nav id="nav">
+						<ul>
+							<li>
+								<a href="#">MENU</a>
+								<ul>
+									<li><a href="#">프로젝트</a></li>
+									<li><a href="#">공지</a></li>
+									<li><a href="#">자주묻는질문</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">게시판</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="/users/login">LOGIN</a>
+								<ul>
+									<li><a href="/users/signup">회원가입</a></li>
+									<li><a href="/users/find_id">계정찾기</a></li>
+								</ul>
+              				</li>
+							<li>
+								<a href="#" class="material-symbols-outlined">search</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+		<!-- Search Bar -->
+			<div id="search">
+				<div class="inner">
+					<div class="content">
+						<p>HYPER PROJECT</p>
+						<form method="post" action="#">
+							<input type="search" name="query" id="query" value="" placeholder="Search our site" />
+						</form>
+					</div>
+				</div>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<div class="main_menu">
+						<ul>
+							<li><a href="/users/signup"><h3>회원가입</h3></a></li>
+							<li><a href="/users/find_id"><h3>아이디 찾기</h3></a></li>
+							<li><a href="/users/find_pw"><h3>비밀번호 찾기</h3></a></li>
+						</ul>
+					</div>
+					<div class="sign_card">
+						<h1>비밀번호 찾기</h1>
+						<form action="" method="post">
+							<div class="info">
+								<label for="user_name">ID</label>
+								<input id="name" type="text" name="name" placeholder="아이디" required/>
+							</div>
+							<div class="info">
+								<button class="next">NEXT</button>
+							</div>
+						</form>
+						<ul>
+							<li><a href=" {% url 'find_id' %} ">ID 찾기</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+	<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<header>
+								<h2>목록 1</h2>
+							</header>
+							<ul class="alt">
+								<li><a href="#">목록내용 1</a></li>
+								<li><a href="#">목록내용 2</a></li>
+								<li><a href="#">목록내용 3</a></li>
+							</ul>
+						</section>
+						<section>
+							<header>
+								<h2>목록 2</h2>
+							</header>
+							<ul class="alt">
+								<li><a href="#">목록내용 1</a></li>
+								<li><a href="#">목록내용 2</a></li>
+								<li><a href="#">목록내용 3</a></li>
+							</ul>
+						</section>
+						<section>
+							<header>
+								<h2>Get in touch</h2>
+							</header>
+							<ul class="contact-icons">
+								<li class="icon solid fa-map-marker-alt">
+									<address>
+										Team Hyper<br />
+										서울 마포구 신촌로 94 그랜드플라자 7층<br />
+									</address>
+								</li>
+								<li class="icon solid fa-envelope">
+									<a href="#">information@untitled.tld</a>
+								</li>
+								<li class="icon brands fa-twitter">
+									<a href="#">@untitled</a>
+								</li>
+								<li class="icon solid fa-phone">
+									(000) 000-0000
+								</li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; Untitled Corporation. All rights reserved. Lorem ipsum dolor sit amet nullam.
+					</div>
+				</div>
+			</footer>
+
+	
+</body>		
+</html>
 </template>
 
+
 <script setup>
-  //
+  
 </script>
