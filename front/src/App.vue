@@ -1,151 +1,204 @@
-<style>
-li {
-	display: inline block;
-	}
-</style>
 <template>
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>HYPER</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a class="logo" href="/"><strong>HYPER</strong></a>
-					<nav id="nav">
-						<ul>
-							<li>
-								<a href="#">MENU</a>
-								<ul>
-									<li><a href="#">프로젝트</a></li>
-									<li><a href="#">공지</a></li>
-									<li><a href="#">자주묻는질문</a></li>
-									<li><a href="#">고객센터</a></li>
-									<li><a href="#">게시판</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="/users/login">LOGIN</a>
-								<ul>
-									<li><a href="/users/signup">회원가입</a></li>
-									<li><a href="/users/find_id">계정찾기</a></li>
-								</ul>
-              				</li>
-							<li>
-								<a href="#" class="material-symbols-outlined">search</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</header>
-
-		<!-- Search Bar -->
-			<div id="search">
-				<div class="inner">
-					<div class="content">
-						<p>HYPER PROJECT</p>
-						<form method="post" action="#">
-							<input type="search" name="query" id="query" value="" placeholder="Search our site" />
-						</form>
-					</div>
-				</div>
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-				<div class="inner">
-					<div class="main_menu">
-						<ul>
-							<li><a href="/users/signup"><h3>회원가입</h3></a></li>
-							<li><a href="/users/find_id"><h3>아이디 찾기</h3></a></li>
-							<li><a href="/users/find_pw"><h3>비밀번호 찾기</h3></a></li>
-						</ul>
-					</div>
-					<div class="sign_card">
-						<h1>비밀번호 찾기</h1>
-						<form action="" method="post">
-							<div class="info">
-								<label for="user_name">ID</label>
-								<input id="name" type="text" name="name" placeholder="아이디" required/>
-							</div>
-							<div class="info">
-								<button class="next">NEXT</button>
-							</div>
-						</form>
-						<ul>
-							<li><a href=" {% url 'find_id' %} ">ID 찾기</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-	<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<header>
-								<h2>목록 1</h2>
-							</header>
-							<ul class="alt">
-								<li><a href="#">목록내용 1</a></li>
-								<li><a href="#">목록내용 2</a></li>
-								<li><a href="#">목록내용 3</a></li>
-							</ul>
-						</section>
-						<section>
-							<header>
-								<h2>목록 2</h2>
-							</header>
-							<ul class="alt">
-								<li><a href="#">목록내용 1</a></li>
-								<li><a href="#">목록내용 2</a></li>
-								<li><a href="#">목록내용 3</a></li>
-							</ul>
-						</section>
-						<section>
-							<header>
-								<h2>Get in touch</h2>
-							</header>
-							<ul class="contact-icons">
-								<li class="icon solid fa-map-marker-alt">
-									<address>
-										Team Hyper<br />
-										서울 마포구 신촌로 94 그랜드플라자 7층<br />
-									</address>
-								</li>
-								<li class="icon solid fa-envelope">
-									<a href="#">information@untitled.tld</a>
-								</li>
-								<li class="icon brands fa-twitter">
-									<a href="#">@untitled</a>
-								</li>
-								<li class="icon solid fa-phone">
-									(000) 000-0000
-								</li>
-							</ul>
-						</section>
-					</div>
-					<div class="copyright">
-						&copy; Untitled Corporation. All rights reserved. Lorem ipsum dolor sit amet nullam.
-					</div>
-				</div>
-			</footer>
-
-	
-</body>		
-</html>
-</template>
-
-
-<script setup>
+	<v-row>
+	  <v-col
+		cols="12"
+		sm="6"
+		class="py-2"
+	  >
+		<p>Exclusive</p>
   
-</script>
+		<v-btn-toggle v-model="toggle_exclusive">
+		  <v-btn>
+			<v-icon>mdi-format-align-left</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-center</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-right</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-justify</v-icon>
+		  </v-btn>
+		</v-btn-toggle>
+	  </v-col>
+  
+	  <v-col
+		cols="12"
+		sm="6"
+		class="py-2"
+	  >
+		<p>Multiple</p>
+  
+		<v-btn-toggle
+		  v-model="toggle_multiple"
+		  background-color="primary"
+		  dark
+		  multiple
+		>
+		  <v-btn>
+			<v-icon>mdi-format-bold</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-italic</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-underline</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-color-fill</v-icon>
+		  </v-btn>
+		</v-btn-toggle>
+	  </v-col>
+  
+	  <v-col
+		cols="12"
+		sm="6"
+		class="py-2"
+	  >
+		<p>No Options Selected</p>
+  
+		<v-btn-toggle v-model="toggle_none">
+		  <v-btn>
+			<v-icon>mdi-format-align-left</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-center</v-icon>
+		  </v-btn>
+		  <v-btn>
+			<v-icon>mdi-format-align-right</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-justify</v-icon>
+		  </v-btn>
+		</v-btn-toggle>
+	  </v-col>
+  
+	  <v-col
+		cols="12"
+		sm="6"
+		class="py-2"
+	  >
+		<p>Mandatory</p>
+  
+		<v-btn-toggle
+		  v-model="toggle_one"
+		  shaped
+		  mandatory
+		>
+		  <v-btn>
+			<v-icon>mdi-format-align-left</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-center</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-right</v-icon>
+		  </v-btn>
+  
+		  <v-btn>
+			<v-icon>mdi-format-align-justify</v-icon>
+		  </v-btn>
+		</v-btn-toggle>
+	  </v-col>
+  
+	  <v-col
+		cols="12"
+		class="py-2"
+	  >
+		<p>Text Options</p>
+  
+		<v-btn-toggle
+		  v-model="text"
+		  rounded="0"
+		  color="deep-purple-accent-3"
+		  group
+		>
+		  <v-btn value="left">
+			Left
+		  </v-btn>
+  
+		  <v-btn value="center">
+			Center
+		  </v-btn>
+  
+		  <v-btn value="right">
+			Right
+		  </v-btn>
+  
+		  <v-btn value="justify">
+			Justify
+		  </v-btn>
+		</v-btn-toggle>
+	  </v-col>
+  
+	  <v-col
+		cols="12"
+		class="py-2"
+	  >
+		<p>Text &amp; Icon Options</p>
+  
+		<v-btn-toggle
+		  v-model="icon"
+		  borderless
+		>
+		  <v-btn value="left">
+			<span class="hidden-sm-and-down">Left</span>
+  
+			<v-icon end>
+			  mdi-format-align-left
+			</v-icon>
+		  </v-btn>
+  
+		  <v-btn value="center">
+			<span class="hidden-sm-and-down">Center</span>
+  
+			<v-icon end>
+			  mdi-format-align-center
+			</v-icon>
+		  </v-btn>
+  
+		  <v-btn value="right">
+			<span class="hidden-sm-and-down">Right</span>
+  
+			<v-icon end>
+			  mdi-format-align-right
+			</v-icon>
+		  </v-btn>
+  
+		  <v-btn value="justify">
+			<span class="hidden-sm-and-down">Justify</span>
+  
+			<v-icon end>
+			  mdi-format-align-justify
+			</v-icon>
+		  </v-btn>
+		</v-btn-toggle>
+	  </v-col>
+	</v-row>
+  </template>
+  
+  <script>
+	export default {
+	  data () {
+		return {
+		  text: 'center',
+		  icon: 'justify',
+		  toggle_none: null,
+		  toggle_one: 0,
+		  toggle_exclusive: 2,
+		  toggle_multiple: [0, 1, 2],
+		}
+	  },
+	}
+  </script>
